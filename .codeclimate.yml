@@ -1,16 +1,11 @@
 engines:
-  gofmt:
+  structure:
     enabled: true
-  govet:
+    channel: "go-beta"
+  duplication:
     enabled: true
-  golint:
-    enabled: true
-ratings:
-  paths:
-    - "**.go"
-exclude_paths:
-  - vendor/
-  - gps/_testdata
-  - cmd/dep/testdata
-  - testdata
-  - gps/internal/pb
+    channel: go-beta
+    config:
+      languages:
+        go:
+          mass_threshold: 30
